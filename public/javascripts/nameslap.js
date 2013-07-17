@@ -23,7 +23,7 @@ function random(){
 				.appendTo($("#results"))
 				.on('click','a',
 					function(){
-						_gaq.push(['_trackEvent', 'referralClick', "goDaddy", "link", $(this).html() ]);
+						_gaq.push(['_trackEvent', 'referralClick', "goDaddy", $(this).html() ]);
 					}
 				)
 	});
