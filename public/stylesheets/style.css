@@ -1,0 +1,45 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #666;
+  color: #f5f5f5;
+}
+.searchButton {
+  cursor: pointer;
+  background: #5eccdb;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+.searchButton:hover {
+  background: #ffa500;
+}
+#results {
+  display: inline-block;
+  width: 100%;
+}
+#results li {
+  display: inline;
+  float: left;
+  width: 200px;
+  padding: 5px 0px;
+  background: #ac6eac;
+  margin: 5px 10px;
+  text-align: center;
+}
+#results li:hover {
+  background: #5edb81;
+  cursor: pointer;
+  color: #fff;
+}
+#results li a {
+  color: #fff;
+  text-decoration: none;
+}
+#footer {
+  display: block;
+  color: #fa8072;
+  margin: 40px 0px;
+  font-size: 10px;
+  text-align: center;
+}

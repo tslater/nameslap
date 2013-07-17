@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= 'All Words'
+  ul
+    - each word in words
+      li= word.word
