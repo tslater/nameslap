@@ -8,6 +8,11 @@
   "dependencies": {
     "express": "3.3.4",
     "jade": "*",
-    "stylus": "*"
+    "mysql": "*",
+    "async": "*",
+    "node-uuid": "*",
+    "cheerio":"*",
+    "request":"*",
+    "stylus":"*"
   }
 }
