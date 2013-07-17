@@ -1,6 +1,6 @@
 
 function random(){
-	ga(['_trackEvent', 'search', "wordFusion"]);
+	_gaq.push(['_trackEvent', 'search', "wordFusion"]);
 
 	$("#resultsSummary").hide();
 	loadingDiv.fadeIn('fast');
@@ -19,7 +19,7 @@ function random(){
 				.appendTo($("#results"))
 				.on('click','a',
 					function(){
-						ga(['_trackEvent', 'referralClick', "goDaddy", "link", $(this).html() ]);
+						_gaq.push(['_trackEvent', 'referralClick', "goDaddy", "link", $(this).html() ]);
 					}
 				)
 	});
@@ -38,12 +38,6 @@ function generateLink(domainName){
 				.attr('href', url)
 				.html(domainName.toLowerCase());
 }
-
-$(document).ready(function(){
-	loadingDiv = $("#loading");
-	setInterval(animateLoading, 120);
-});
-
 
 // function pastelColors(){
 //     var r = (Math.round(Math.random()* 127) + 127).toString(16);
