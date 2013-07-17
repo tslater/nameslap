@@ -7,7 +7,7 @@ function random(){
 
 	$.post("/randomGen", function(data){
 
-		loadingDiv.fadeOut();
+		loadingDiv.hide();
 		$("#resultsSummary").fadeIn();
 
 		var words = $.parseJSON(data);
