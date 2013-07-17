@@ -1,45 +1,53 @@
 body {
-  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #666;
   color: #f5f5f5;
+  text-align: center;
+  height: 100%;
 }
-.searchButton {
+body .searchButton {
   cursor: pointer;
   background: #5eccdb;
   display: inline-block;
-  text-align: center;
   padding: 10px;
 }
-.searchButton:hover {
-  background: #ffa500;
+body .searchButton:hover {
+  background: #ffff67;
+  color: #666;
 }
-#results {
+body #resultsSummary #results {
   display: inline-block;
   width: 100%;
 }
-#results li {
+body #resultsSummary #results li {
   display: inline;
   float: left;
+}
+body #resultsSummary #results li a {
+  color: #fff;
+  text-decoration: none;
   width: 200px;
   padding: 5px 0px;
   background: #ac6eac;
   margin: 5px 10px;
-  text-align: center;
+  display: inline-block;
 }
-#results li:hover {
+body #resultsSummary #results li:hover a {
+  color: #666;
   background: #5edb81;
   cursor: pointer;
-  color: #fff;
 }
-#results li a {
-  color: #fff;
-  text-decoration: none;
+body #loading {
+  display: none;
+  font-size: 30px;
+  padding: 25% 0 0 0;
+  background: none;
 }
-#footer {
+body #footer {
+  bottom: 5px;
+  position: fixed;
   display: block;
   color: #fa8072;
-  margin: 40px 0px;
   font-size: 10px;
-  text-align: center;
+  width: 100%;
 }

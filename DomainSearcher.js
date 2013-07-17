@@ -81,6 +81,8 @@ function randomWords(callback){
 DomainSearcher.prototype.generateAndTestWords = function(callback){
 	randomWords(function(results){
 		var queryWords = Array();
+		if(results==="undefined")
+			callback({});
 		for(var i=0; i<results.length;i++)
 			queryWords.push(results[i].word);
 		sendGoDaddyRequest(queryWords, dotComOnly, callback);

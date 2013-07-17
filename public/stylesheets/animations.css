@@ -1,0 +1,89 @@
+
+#loading
+{
+color:whitesmoke;
+animation:pastel 5s;
+-moz-animation:pastel 5s; /* Firefox */
+-webkit-animation:pastel 5s; /* Safari and Chrome */
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+}
+
+@keyframes pastel
+{
+	10%   {color:	#dab9eb ;}
+	20%   {color:	#90e9ca ;}
+	30%   {color:	#b786cb ;}
+	40%   {color:	#e5eae5 ;}
+	50%   {color:	#adf59f ;}
+	60%   {color:	#eebeb1 ;}
+	70%   {color:	#95d1c5 ;}
+	80%   {color:	#93f6ee ;}
+	90%   {color:	#99d2d1 ;}
+	100%  {color:	#d4ef81 ;}
+}
+
+@-moz-keyframes pastel /* Firefox */
+{
+	10%   {color:	#dab9eb ;}
+	20%   {color:	#90e9ca ;}
+	30%   {color:	#b786cb ;}
+	40%   {color:	#e5eae5 ;}
+	50%   {color:	#adf59f ;}
+	60%   {color:	#eebeb1 ;}
+	70%   {color:	#95d1c5 ;}
+	80%   {color:	#93f6ee ;}
+	90%   {color:	#99d2d1 ;}
+	100%  {color:	#d4ef81 ;}
+}
+
+@-webkit-keyframes pastel /* Safari and Chrome */
+{
+	10%   {color:	#dab9eb ;}
+	20%   {color:	#90e9ca ;}
+	30%   {color:	#b786cb ;}
+	40%   {color:	#e5eae5 ;}
+	50%   {color:	#adf59f ;}
+	60%   {color:	#eebeb1 ;}
+	70%   {color:	#95d1c5 ;}
+	80%   {color:	#93f6ee ;}
+	90%   {color:	#99d2d1 ;}
+	100%  {color:	#d4ef81 ;}
+}
+
+/*
+pastels
+
+#dab9eb
+#90e9ca
+#b786cb
+#e5eae5
+#adf59f
+#eebeb1
+#95d1c5
+#93f6ee
+#99d2d1
+#d4ef81
+#dfec9c
+#a19b84
+#8490e6
+#a8cbf4
+#b2c280
+#e6d9ed
+#dadae6
+#fea38c
+#bca392
+#dbec8c
+#f0d8ab
+#daf4f7
+#95aebe
+#a798bd
+#97dcad
+#c6c491
+#84e9a4
+#fdfbef
+#8de4a9
+#9fddbd
+#92a680
+#f6afeb
+*/

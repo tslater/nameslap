@@ -1,39 +1,48 @@
 body
-  padding: 20px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
   background: #666
   color: whitesmoke
-
-.searchButton
-  cursor: pointer
-  background: #5ECCDB
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-  &:hover
-    background: orange
-
-#results
-  display: inline-block
-  width: 100%
-  li
-    display: inline
-    float: left
-    width: 200px
-    padding: 5px 0px
-    background: rgb(172, 110, 172)
-    margin: 5px 10px
-    text-align: center
+  text-align: center
+  height: 100%
+  .searchButton
+    cursor: pointer
+    background: #5ECCDB
+    display: inline-block;
+    padding: 10px;
     &:hover
-        background: #5EDB81
-        cursor: pointer
-        color: white
-     a
-       color: white
-       text-decoration: none
-#footer
-  display: block
-  color: salmon
-  margin: 40px 0px
-  font-size: 10px
-  text-align: center;
+      background: #ffff67
+      color: #666
+  #resultsSummary
+    #results
+      display: inline-block
+      width: 100%
+      li
+        display: inline
+        float: left
+        a
+          color: white
+          text-decoration: none
+          width: 200px
+          padding: 5px 0px
+          background: rgb(172, 110, 172)
+          margin: 5px 10px
+          display: inline-block
+        &:hover a
+          color: #666
+          background: #5EDB81
+          cursor: pointer
+  #loading
+    display: none
+    font-size: 30px
+    padding: 25% 0 0 0;
+    background: none
+  #footer
+    bottom: 5px
+    position: fixed
+    display: block
+    color: salmon
+    font-size: 10px
+    width: 100%;
+
+
+

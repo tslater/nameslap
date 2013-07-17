@@ -2,22 +2,26 @@
 function random(){
 	ga(['_trackEvent', 'search', "wordFusion"]);
 
+	$("#resultsSummary").hide();
+	loadingDiv.fadeIn('fast');
+
 	$.post("/randomGen", function(data){
+
+		loadingDiv.fadeOut();
+		$("#resultsSummary").fadeIn();
+
 		var words = $.parseJSON(data);
 		$("#resultNum").html(words.length);
 		$('#results').html('');
 		for(var i = 0; i < words.length; i++)
 			$('<li></li>')
 				.append(generateLink(words[i]))
-				.hide()
 				.appendTo($("#results"))
-				.on('click',
-					'a',
+				.on('click','a',
 					function(){
 						ga(['_trackEvent', 'referralClick', "goDaddy", "link", $(this).html() ]);
 					}
 				)
-				.fadeIn();
 	});
 }
 
@@ -34,3 +38,16 @@ function generateLink(domainName){
 				.attr('href', url)
 				.html(domainName.toLowerCase());
 }
+
+$(document).ready(function(){
+	loadingDiv = $("#loading");
+	setInterval(animateLoading, 120);
+});
+
+
+// function pastelColors(){
+//     var r = (Math.round(Math.random()* 127) + 127).toString(16);
+//     var g = (Math.round(Math.random()* 127) + 127).toString(16);
+//     var b = (Math.round(Math.random()* 127) + 127).toString(16);
+//     return '#' + r + g + b;
+// }

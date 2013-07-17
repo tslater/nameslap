@@ -3,10 +3,9 @@ extends layout
 block content
 	h1= "Domain Name Generator"
 	div.searchButton(onclick="random()")="Roll 'em Snake Eyes"
-	#resultsSummary
-		h2
-			span#resultNum="0"
-			span=" Results"
+	div#resultsSummary
+		h3
+			span#resultNum="Click For"
+			span=" Available Names"
 		ul#results
-
-
+	div#loading="loading"
