@@ -28,10 +28,22 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+function removeSubdomain(hostname){
+  var hostnameArr = hostname.split('.');
+  hostnameArr.shift();
+  return hostnameArr.join('.');
+}
 
 require("./DomainSearcher.js");
 domainSearcher = new DomainSearcher();
 domainSearcher.testConnection();
+
+app.get('/*', function(req, res, next) {
+    if (req.headers.host.match(/^www/) !== null )
+      res.redirect('http://' + removeSubdomain(req.headers.host) + req.url, 301);
+    else next();
+});
+
 
 app.get('/', function(req, res){
       res.render('random_gen',{});

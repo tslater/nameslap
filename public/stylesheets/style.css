@@ -39,8 +39,8 @@ body #resultsSummary #results li:hover a {
 }
 body #loading {
   display: none;
-  font-size: 30px;
-  padding: 25% 0 0 0;
+  font-size: 40px;
+  padding: 10% 0 0 0;
   background: none;
 }
 body #footer {
