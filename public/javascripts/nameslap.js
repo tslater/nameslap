@@ -1,4 +1,8 @@
 
+$(document).ready(function(){
+	loadingDiv = $("#loading");
+});
+
 function random(){
 	_gaq.push(['_trackEvent', 'search', "wordFusion"]);
 
