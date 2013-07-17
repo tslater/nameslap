@@ -10,6 +10,14 @@ var connectionPool  = mysql.createPool({
   // debug	   :  true
 });
 
+var connectionPool  = mysql.createPool({
+  host     : 'nameslap-live.cb16rnvxpnve.us-west-2.rds.amazonaws.com',
+  user     : 'nameslap',
+  password : 'notinstagram1',
+  database : 'nameslap',
+  // debug	   :  true
+});
+
 
 
 DbConn = function(){};
