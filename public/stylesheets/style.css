@@ -5,7 +5,16 @@ body {
   text-align: center;
   height: 100%;
 }
+body h5 {
+  margin-top: 0px;
+}
+body #suggestion {
+  font-size: 21px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
 body .searchButton {
+  vertical-align: middle;
   cursor: pointer;
   background: #5eccdb;
   display: inline-block;

@@ -21,11 +21,17 @@ var wordFusionQuery =	" SELECT CONCAT(rand1.word, rand2.word) as word" +
 						"	)	as rand2 " +
 						" ON rand1.rowNum = rand2.rowNum ";
 
+
+
 DomainSearcher = function(){};
 require('./mysql_connect');
 var cheerio = require('cheerio');
 var request = require('request');
 
+
+function trim(string){
+	return string.replace(/\s+/g, '');
+}
 
 dbConn = new DbConn();
 
@@ -72,21 +78,50 @@ function sendGoDaddyRequest(names, tlds, callback){
 	);
 }
 
+function halfRandomWords(word, callback){
+	word = dbConn.mysql.escape(word);
+	var query = "" +
+			"	SELECT IF(" +
+			"			ROUND( RAND())," +
+			"				CONCAT(word, " + word + ")," +
+			"				CONCAT(" + word + ", word)" +
+			"		)  as word" +
+			"	FROM monosyllabic" +
+			"	ORDER BY RAND() "+
+			"	LIMIT " + limit +
+			"";
+	console.log(query);
+	dbConn.query(query, function(rows){
+		callback(rows);
+	} );
+}
+
 function randomWords(callback){
 	dbConn.query(wordFusionQuery, function(rows){
 		callback(rows);
 	} );
 }
 
-DomainSearcher.prototype.generateAndTestWords = function(callback){
-	randomWords(function(results){
+DomainSearcher.prototype.generateAndTestWords = function(callback, suggestion){
+	var domainSearchfunc = function(results){
 		var queryWords = Array();
 		if(results==="undefined")
 			callback({});
 		for(var i=0; i<results.length;i++)
 			queryWords.push(results[i].word);
 		sendGoDaddyRequest(queryWords, dotComOnly, callback);
-	});
+	};
+	if(suggestion !== undefined){
+		suggestion = trim(suggestion);
+		console.log("--"+suggestion+"--");
+		if(suggestion !== "")
+			halfRandomWords(suggestion, domainSearchfunc);
+		else
+			randomWords(domainSearchfunc);
+
+	}
+	else
+		randomWords(domainSearchfunc);
 };
 
 

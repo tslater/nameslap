@@ -50,9 +50,14 @@ app.get('/', function(req, res){
 });
 
 app.post('/randomGen', function(req, res){
-  domainSearcher.generateAndTestWords(function(results){
+  var suggestion = req.body.suggestion;
+  var callbackFunc = function(results){
     res.send(JSON.stringify(results));
-  });
+  };
+  if(suggestion === undefined)
+    domainSearcher.generateAndTestWords(callbackFunc);
+  else
+    domainSearcher.generateAndTestWords(callbackFunc, suggestion);
 });
 
 app.get('/listWords:limit?', function(req, res){

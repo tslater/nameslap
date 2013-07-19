@@ -3,7 +3,9 @@ extends layout
 block content
 	h1="Business Name Generator"
 	h5="find your domain"
-	div.searchButton(onclick="random()")="Fire the Generator!"
+	div#seach
+		input#suggestion
+		div.searchButton(onclick="random()")="Fire the Generator!"
 	div#resultsSummary
 		h3
 			span#resultNum="Click For"

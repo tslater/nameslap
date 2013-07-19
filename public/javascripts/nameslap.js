@@ -9,7 +9,7 @@ function random(){
 	$("#resultsSummary").hide();
 	loadingDiv.fadeIn('fast');
 
-	$.post("/randomGen", function(data){
+	$.post("/randomGen", { suggestion: $('#suggestion').val() }, function(data){
 
 		loadingDiv.hide();
 		$("#resultsSummary").fadeIn();
