@@ -4,6 +4,10 @@ body
   color: whitesmoke
   text-align: center
   height: 100%
+  position: relative
+  margin: 0px
+  padding: 0px
+
   h5
     margin-top: 0px
   #suggestion
@@ -23,21 +27,21 @@ body
     #results
       display: inline-block
       width: 100%
-      li
-        display: inline
-        float: left
-        a
-          color: white
-          text-decoration: none
-          width: 200px
-          padding: 5px 0px
-          background: rgb(172, 110, 172)
-          margin: 5px 10px
-          display: inline-block
-        &:hover a
-          color: #666
-          background: #5EDB81
-          cursor: pointer
+  li
+    display: inline
+    float: left
+    a
+      color: white
+      text-decoration: none
+      width: 150px
+      padding: 5px 0px
+      background: rgb(172, 110, 172)
+      margin: 5px 10px
+      display: inline-block
+    &:hover a
+      color: #666
+      background: #5EDB81
+      cursor: pointer
   #loading
     display: none
     font-size: 40px
@@ -51,5 +55,24 @@ body
     font-size: 10px
     width: 100%;
 
-
-
+  #favs
+    position: absolute
+    top: 0px
+    height: 100000px
+    background: #454545
+    overflow: hidden
+    width: 160px
+    padding: 10px
+    margin: 0px;
+    #favDrop
+      background: red
+      height: 100%
+      padding: 0px
+      margin: 0px
+      width: 100%
+      list-style-stype: none
+      position: relative
+  .hiddenLeft
+    left: 0px
+  #loginForm
+    margin: 10px

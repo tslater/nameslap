@@ -50,6 +50,15 @@ animation:pastel 5s;
 	90%   {color:	#99d2d1 ;}
 	100%  {color:	#d4ef81 ;}
 }
+/*
+.slideFromLeft{
+    left: 0px !important;
+    -webkit-transition: left 1s ease;
+    -moz-transition: left 1s ease;
+    -o-transition: left 1s ease;
+    -ms-transition: left 1s ease;
+    transition: left 1s ease;
+}*/
 
 /*
 pastels

@@ -1,9 +1,16 @@
 extends layout
 
 block content
+	div#favs.hiddenLeft
+		h3="saves your faves"
+		ul#favDrop
+			li(class='draggable')
+				a(class='referralLink')="what?"
+			li(class='draggable')
+				a(class='referralLink')="what?"
 	h1="Business Name Generator"
 	h5="find your domain"
-	div#seach
+	div#search
 		input#suggestion
 		div.searchButton(onclick="random()")="Fire the Generator!"
 	div#resultsSummary
@@ -11,4 +18,14 @@ block content
 			span#resultNum="Click For"
 			span=" Available Names"
 		ul#results
+		li(class='draggable')
+			a(class='referralLink')="what?"
+		li(class='draggable')
+			a(class='referralLink')="what?"
+		li(class='draggable')
+			a(class='referralLink')="what?"
+		li(class='draggable')
+			a(class='referralLink')="what?"
+		li(class='draggable')
+			a(class='referralLink')="what?"
 	div#loading="loading"

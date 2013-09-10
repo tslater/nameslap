@@ -26,8 +26,9 @@ DbConn.prototype.mysql = mysql;
 
 DbConn.prototype.query = function(query, callback){
 	connectionPool.getConnection(function(err, connection) {
-		connection.query( query, function(err, rows) {
-			callback(rows);
+		connection.query( query, function(err, result) {
+      if(err) console.log(err);
+			callback(result);
 			connection.end();
 		});
 	});
